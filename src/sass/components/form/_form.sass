@@ -4,7 +4,7 @@
 	width: 100%
 
 	&_block &__row
-		margin-bottom: 15px
+		margin-bottom: 20px
 
 	+max(sm)
 		&_line &__row
@@ -59,6 +59,10 @@
 			&__row
 				margin-top: 30px
 	@else
+		&__row
+			&_submit
+				text-align: center
+
 		&__control
 			+input-default
 

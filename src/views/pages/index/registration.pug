@@ -1,4 +1,4 @@
-+b.SECTION.form#form
++b.SECTION.registration#form
 	.container
 		+b.H3.title._sm._section Чтобы начать процесс правильного SMM-продвижения достаточно лишь 
 			br
@@ -9,7 +9,7 @@
 			.col-12.col-sm-5
 				+e.image
 					img(src="img/form-image.png")
-			.col-12.col-sm-7
+			.col-12.col-sm-7.col-md-6
 				+b.FORM.form._block(action="#" method="POST")
 					+e.content
 						+e.row
@@ -18,5 +18,5 @@
 							+e.INPUT.control(name="email" type="email" placeholder="E-mail")
 						+e.row
 							+e.INPUT.control(name="phone" type="phone" placeholder="Телефон")
-						+e.row
-							+e.BUTTON.submit.btn._brand-1(type="submit") Смотреть уроки
+						+e.row._submit
+							+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Смотреть уроки
