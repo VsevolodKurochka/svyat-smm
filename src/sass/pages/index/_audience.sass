@@ -1,0 +1,61 @@
+.audience
+	+padding-y(45px)
+	background-color: $color-brand-2
+	color: $color-white
+
+	&__intro
+		margin-bottom: 30px
+
+		+min(sm)
+			margin-bottom: 45px
+			flex-direction: row-reverse
+			align-items: center
+
+		&-header
+
+			&-title
+				margin-bottom: 30px
+				font-size: 18px
+
+			&-content
+				line-height: 1.2
+
+	&__item
+		
+		+max(md)
+			+offset()
+
+		&-inner
+			padding-bottom: 30px
+			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 80%)
+
+		&_1 &-inner
+			background-color: #0082ed
+
+		&_2 &-inner
+			background-color: #0054c7
+
+		&_3 &-inner
+			background-color: #00327e
+
+		&_4 &-inner
+			background-color: #012760
+
+
+		&-title
+			+relative()
+			padding: 20px 15px
+			font-size: 20px
+			line-height: 1.1
+			+font('secondary')
+
+			&:before
+				content: ""
+				+absolute(null, null, 0, 0)
+				+size(80%, 5px)
+				background-color: $color-brand-2
+
+		&-content
+			padding: 30px 15px
+			font-size: 14px
+			min-height: 180px
