@@ -1,0 +1,22 @@
++b.SECTION.form#form
+	.container
+		+b.H3.title._sm._section Чтобы начать процесс правильного SMM-продвижения достаточно лишь 
+			br
+			| зарегистрироваться и действовать по инструкциям в занятиях
+		+e.H4.subtitle Регистрируйтесь — и проверяйте почту. Сегодня вы попрощаетесь с неэффективным SMM.
+
+		+e.row.row
+			.col-12.col-sm-5
+				+e.image
+					img(src="img/form-image.png")
+			.col-12.col-sm-7
+				+b.FORM.form._block(action="#" method="POST")
+					+e.content
+						+e.row
+							+e.INPUT.control(name="name" type="text" placeholder="Имя")
+						+e.row
+							+e.INPUT.control(name="email" type="email" placeholder="E-mail")
+						+e.row
+							+e.INPUT.control(name="phone" type="phone" placeholder="Телефон")
+						+e.row
+							+e.BUTTON.submit.btn._brand-1(type="submit") Смотреть уроки
