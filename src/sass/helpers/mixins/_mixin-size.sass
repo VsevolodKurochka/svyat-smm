@@ -1,4 +1,22 @@
 ////
+/// Height
+/// @author Vsevolod Kurochka
+/// @type mixin
+/// @param {Length} $height [$height] - Element's height
+////
+=h($height)
+	height: $height
+
+////
+/// Width
+/// @author Vsevolod Kurochka
+/// @type mixin
+/// @param {Length} $width [$width] - Element's width
+////
+=w($width)
+	width: $width
+
+////
 /// Size
 /// @author Vsevolod Kurochka
 /// @type mixin
@@ -6,5 +24,5 @@
 /// @param {Length} $height [$width] - Element's height
 ////
 =size($width, $height: $width)
-	width: $width
-	height: $height
+	+w($width)
+	+h($height)

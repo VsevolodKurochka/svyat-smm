@@ -162,7 +162,7 @@
 			this.navigation = document.getElementById('js-navigation');
 			this.menu = document.getElementById('js-navigation-menu');
 			this.hamburger = document.getElementById('js-nav-hamburger');
-			this.addition = document.getElementById('js-nav-addition');
+			this.addition = document.getElementById('js-nav-addition-button-1');
 			this.links = '.nav__menu-item-link';
 
 			this.linksScroll();

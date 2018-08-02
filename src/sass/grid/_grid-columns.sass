@@ -37,9 +37,7 @@ $themeColumn: "col"
 		+padding-x(getComp(gutter))
 @else
 	[class*=#{$themePrefix}#{$themeColumn}-]
-		position: relative
+		+relative()
 		min-height: 1px
-
-		+padding-x(getComp(gutter))
-
 		float: left
+		+padding-x(getComp(gutter))

@@ -1,11 +1,11 @@
 // Variables
 
-$hamburger-width: 33px
-$hamburger-height: 30px
+$hamburger-width: 30px
+$hamburger-height: 28px
 $hamburger-transistion-duration: 0.3s
 $hamburger-line-width: 100%
-$hamburger-line-height: 4px
-$hamburger-line-radius: 4px
+$hamburger-line-height: 2px
+$hamburger-line-radius: 5px
 
 +b('hamburger')
 	@at-root
@@ -31,12 +31,11 @@ $hamburger-line-radius: 4px
 
 	@extend %hamburger-format
 
-	&__lines
-		+relative
-
+	+e('lines')
+		+relative()
 		+size($hamburger-width, $hamburger-height)
 
-		text-indent: -9999px
+		overflow: hidden
 
 		@extend %hamburger-format
 
@@ -52,7 +51,7 @@ $hamburger-line-radius: 4px
 			
 			@extend %hamburger-transition	
 
-	&__text
+	+e('text')
 		margin-left: 15px
 		color: $color-white
 		text-transform: uppercase

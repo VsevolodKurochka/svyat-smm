@@ -1,13 +1,12 @@
 include /blocks/nav/navLogo
 include /blocks/nav/navMenu
-include /blocks/nav/navAddition
+include /blocks/nav/navAddition2
 
 mixin navBase(additionalClass)
 	+b.fixed
 		+b.nav#js-navigation&attributes(attributes)(class=additionalClass)
-			+e.content
-				+e.container.container
-					+e.row.row
-						+navLogo()
-						+navMenu()
-						+navAddition()
+			+e.container.container
+				+e.row.row
+					+navLogo()
+					+navMenu()
+					+navAddition2()
