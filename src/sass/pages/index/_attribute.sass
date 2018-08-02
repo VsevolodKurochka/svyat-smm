@@ -7,3 +7,22 @@
 
 	&__footer
 		text-align: center
+
+	&__circle
+
+		margin-bottom: 45px
+		+relative()
+
+		+min(md)
+			margin-bottom: 60px
+
+		+min(lg)
+			margin-bottom: 90px
+
+		&-image
+			+margin-x(auto)
+
+			+min(md)
+				+bg('../img/attribute-circle.png')
+			+min(lg)
+				+size(973px, 972px)
