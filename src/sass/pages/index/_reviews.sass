@@ -1,0 +1,46 @@
+.reviews
+	+padding-y(45px)
+	background-color: $color-brand-2
+	color: $color-white
+
+	+min(sm)
+		+padding-y(60px)
+
+	&__item
+		+offset(30px)
+
+		+min(sm)
+			display: flex
+
+		+min(md)
+			+offset(60px)
+
+		&-image
+			+size(95px)
+			flex-basis: 95px
+
+			+max(sm)
+				margin-bottom: 5px
+
+			img
+				object-fit: cover
+
+		&-content
+			+min(sm)
+				flex-grow: 1
+				flex-basis: 0
+				margin-left: 30px
+
+			&-header
+				margin-bottom: 15px
+
+				+min(sm)
+					margin-bottom: 30px
+
+		&-name
+			+font('secondary')
+			font-size: 20px
+			line-height: 1.1
+
+		&-position
+			font-size: 14px
