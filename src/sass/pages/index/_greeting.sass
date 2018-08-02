@@ -1,0 +1,44 @@
+.greeting
+	background-color: #040507
+	color: $color-white
+
+	+padding-y(45px)
+
+	+min(md)
+		+padding-y(100px, 50px)
+	
+	@at-root
+		%title
+			line-height: 1.1
+			margin-top: 0
+			margin-bottom: 30px
+
+	&__title
+		+font('secondary')
+		@extend %title
+
+		font-size: 26px
+
+		+min(sm)
+			font-size: 30px
+
+		+min(md)
+			font-size: 35px
+
+		+min(lg)
+			font-size: 40px
+
+	&__subtitle
+		font-size: 18px
+		@extend %title
+
+	&__act
+
+		&-title
+			margin-bottom: 15px
+
+		&-list
+			margin-bottom: 30px
+
+		&-content
+			margin-left: 30px

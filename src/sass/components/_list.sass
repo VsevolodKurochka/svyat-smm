@@ -7,11 +7,20 @@
 		&:after
 			+pseudo
 
-	+m('cancel')
+	+m('like')
 		li
-			padding-left: 30px
+			padding-left: 45px
+
+			+offset(15px)
 
 			&:after
 				top: 0
 				left: 0
-				+size(37px)
+				+size(30px)
+				+bg('../img/like.svg')
+
+			+min(sm)
+				padding-left: 60px
+
+				&:after
+					+size(41px)
