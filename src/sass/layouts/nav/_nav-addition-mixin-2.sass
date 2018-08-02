@@ -1,13 +1,32 @@
 =navAddition2()
 	+e('addition')
 		font-size: 0
+		height: 100%
 
+		+ee('mobile')
+			+relative()
+			display: block
+			height: 100%
+			left: 15px
+			text-align: right
+
+			+min(md)
+				display: none
+
+		+ee('btn')
+			display: inline-flex
+			justify-content: center
+			text-align: center
+			align-items: center
+			height: 100%
+			
 		+max(md)
-			+absolute(100%, null, null, 0)
-			padding: 5px 0 5px 15px
-			+w(100%)
-			background-color: darken($color-responsive-menu, 10%)
-			overflow: hidden
+			+ee('content')
+				+absolute(100%, null, null, 0)
+				padding: 5px 0 5px 15px
+				+w(100%)
+				background-color: darken($color-responsive-menu, 10%)
+				overflow: hidden
 
 		+min(md)
 			text-align: right
@@ -23,9 +42,12 @@
 			text-decoration: none
 			color: $color-white
 			font-size: 14px
-
+			+transition()
+			&:hover,
+			&:focus
+				color: $color-brand-1
+					
 			+min(md)
-				display: block
-				margin-right: 0
-				color: $color-black
-				font-size: 18px
+
+				&:not(:last-child)
+					margin-right: 30px
