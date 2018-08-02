@@ -13,10 +13,10 @@
 				+b.FORM.form._block(action="#" method="POST")
 					+e.content
 						+e.row
-							+e.INPUT.control(name="name" type="text" placeholder="Имя")
+							+e.INPUT.control(name="name" type="text" placeholder="Имя" required autocomplete="off")
 						+e.row
-							+e.INPUT.control(name="email" type="email" placeholder="E-mail")
+							+e.INPUT.control(name="email" type="email" placeholder="E-mail" required autocomplete="off")
 						+e.row
-							+e.INPUT.control(name="phone" type="phone" placeholder="Телефон")
+							+e.INPUT.control(name="phone" type="phone" placeholder="Телефон" required autocomplete="off")
 						+e.row._submit
 							+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Смотреть уроки
