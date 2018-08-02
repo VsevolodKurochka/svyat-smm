@@ -2,7 +2,6 @@ extends /layouts/base
 
 block blocks
 	include /blocks/nav/navBase
-	include /blocks/footer/footerBase
 
 block variables
 	- var title = 'SMM: Как выжимать максимум из социальных сетей ';
@@ -14,4 +13,4 @@ block nav
 	+navBase()
 block content
 	include /pages/index/greeting
-	+footerBase()
+	include /pages/index/social

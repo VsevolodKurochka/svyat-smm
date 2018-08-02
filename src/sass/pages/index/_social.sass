@@ -1,0 +1,52 @@
+.social
+	background-color: $color-brand-2
+	color: $color-white
+
+	+padding-y(45px)
+
+	+min(sm)
+		overflow: hidden
+
+	&__content
+
+		+min(sm)
+			margin-left: 45px
+
+		+min(md)
+			margin-top: 60px
+
+		&-title
+			margin-bottom: 20px
+
+			+min(sm)
+				margin-bottom: 30px
+
+			+min(md)
+				margin-bottom: 45px
+
+		&-body
+			margin-bottom: 30px
+
+			+min(sm)
+				margin-bottom: 45px
+
+			+min(md)
+				margin-bottom: 60px
+
+		&-list
+			+min(md)
+				margin-left: 60px
+
+	&__bg
+
+		+max(sm)
+			text-align: center
+			margin-top: 30px
+			margin-bottom: -60px
+
+			img
+				max-height: 200px
+
+		+min(sm)
+			+absolute(55%, -15%)
+			transform: translateY(-50%)

@@ -2,7 +2,7 @@
 $title-xs: ("title-xs": ('default': 18px, 'xs': 20px))
 
 /// Define sizes for title-sm
-$title-sm: ("title-sm": ('default': 20px, 'sm': 20px, 'md': 30px, 'lg': 40px))
+$title-sm: ("title-sm": ('default': 19px, 'sm': 20px, 'md': 21px, 'lg': 21px))
 
 /// Define sizes for title-md
 $title-md: ("title-md": ('default': 25px, 'sm': 30px, 'md': 40px, 'lg': 50px))
@@ -22,22 +22,30 @@ $sizes: map-merge($sizes, $title-lg)
   font-weight: normal
 
 +b('title')
-  &-xs
+  &_xs
     +fs("title-xs")
 
     @extend %title-default
 
-  &-sm
+  &_sm
     +fs("title-sm")
 
     @extend %title-default
 
-  &-md
+  &_md
     +fs("title-md")
 
     @extend %title-default
 
-  &-lg
+  &_lg
     +fs("title-lg")
 
     @extend %title-default
+
+  &_section
+    +font('secondary')
+    text-align: center
+    margin-bottom: 30px
+
+    +min(md)
+      margin-bottom: 45px
