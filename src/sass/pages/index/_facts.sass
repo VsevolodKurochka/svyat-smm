@@ -1,0 +1,54 @@
+.facts
+	+padding-y(45px)
+	background-color: #eef2ff
+
+	&__item
+
+		color: $color-white
+
+		+max(md)
+			+offset()
+
+		&-inner
+			padding: 15px
+			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 80%)
+
+			+min(md)
+				padding: 30px
+
+		&_1 &-inner
+			background-color: #0082ed
+
+		&_2 &-inner
+			background-color: #0054c7
+
+		&_3 &-inner
+			background-color: #00327e
+
+		&-header
+			margin-bottom: 30px
+
+			+min(sm)
+				margin-bottom: 45px
+
+		&-number
+			+font('secondary')
+			font-size: 100px
+			line-height: 1
+
+			+min(md)
+				font-size: 140px
+				line-height: 0.8
+
+		&-subtitle
+			font-size: 25px
+			line-height: 1
+
+		&-content
+			font-size: 14px
+
+			+min(xs)
+				min-height: 210px
+
+			+min(md)
+				min-height: 140px
