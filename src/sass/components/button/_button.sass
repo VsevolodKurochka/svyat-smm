@@ -11,7 +11,7 @@
 	border: none
 	border-radius: 0
 	
-	font-weight: bold
+	font-weight: normal
 	text-decoration: none
 	line-height: 1.4
 	
@@ -25,7 +25,11 @@
 	+btn-placeholder()
 
 	&_lg
-			+btn-size($btn-large-padding, $btn-large-size)
+		border-radius: 10px
+		+btn-size($btn-large-padding, $btn-large-size)
+
+		+min(md)
+			+btn-size($btn-large-md-padding, $btn-large-md-size)
 
 	&_shadow
 		&-brand-1
