@@ -10,13 +10,19 @@
 				+e.image
 					img(src="img/form-image.png")
 			.col-12.col-sm-7.col-md-6
-				+b.FORM.form._block(action="#" method="POST")
+				
+				+b.FORM.form._block(action="https://imarkschoolru.activehosted.com/proc.php" method="POST")
+					input(type='hidden', name='u', value='13')
+					input(type='hidden', name='f', value='13')
+					input(type='hidden', name='s')
+					input(type='hidden', name='c', value='0')
+					input(type='hidden', name='m', value='0')
+					input(type='hidden', name='act', value='sub')
+					input(type='hidden', name='v', value='2')
 					+e.content
 						+e.row
-							+e.INPUT.control(name="name" type="text" placeholder="Имя" required autocomplete="off")
+							+e.INPUT.control(name="fullname" type="text" placeholder="Имя" required autocomplete="off")
 						+e.row
 							+e.INPUT.control(name="email" type="email" placeholder="E-mail" required autocomplete="off")
-						+e.row
-							+e.INPUT.control(name="phone" type="phone" placeholder="Телефон" required autocomplete="off")
 						+e.row._submit
 							+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Смотреть уроки
