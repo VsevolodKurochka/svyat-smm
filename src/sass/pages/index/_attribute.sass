@@ -13,6 +13,10 @@
 		margin-bottom: 45px
 		+relative()
 
+		+min(sm)
+			+max(md)
+				+row()
+
 		+min(md)
 			margin-bottom: 60px
 
@@ -20,14 +24,36 @@
 			margin-bottom: 90px
 
 		&-image
+			+relative()
 			+margin-x(auto)
 
 			+min(md)
 				+bg('../img/attribute-circle.png')
+				+size(900px, 901px)
+				&:before
+					content: "?"
+					+absolute(50%, null, null, 50%)
+					transform: translate(-50%,-50%)
+					font-size: 150px
+					line-height: 1
+					color: $color-black
+					+font('secondary')
+
 			+min(lg)
 				+size(973px, 972px)
 
 		&-item
+
+			+min(sm)
+				+max(md)
+					flex-basis: 50%
+					min-height: 180px
+
+			+max(md)
+				&:not(:last-child)
+					margin-bottom: 30px
+				text-align: center
+
 			+min(md)
 				font-size: 14px
 				+absolute()
@@ -37,6 +63,39 @@
 				&_5,
 				&_7
 					color: $color-white
+
+				&_1
+					top: 195px
+					left: 75px
+
+				&_2
+					top: 30px
+					left: 357px
+
+				&_3
+					top: 150px
+					left: 660px
+
+				&_4
+					top: 427px
+					left: 810px
+
+				&_5
+					top: 700px
+					left: 640px
+
+				&_6
+					top: 810px
+					left: 350px
+
+				&_7
+					top: 715px
+					left: 105px
+
+				&_8
+					top: 415px
+					left: 0
+					max-width: 150px
 
 			+min(lg)
 				&_1
@@ -70,7 +129,10 @@
 				&_8
 					top: 440px
 					left: -20px
+					max-width: none
 
 			&-image
+				+max(md)
+					height: 70px
 				+min(md)
 					display: none
