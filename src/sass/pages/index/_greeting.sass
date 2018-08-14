@@ -1,11 +1,12 @@
 .greeting
 	background-color: #040507
 	color: $color-white
+	font-size: 0
 
-	+padding-y(45px)
+	padding-top: 45px
 
 	+min(md)
-		+padding-y(100px, 50px)
+		padding-top: 100px
 	
 	@at-root
 		%title
@@ -33,6 +34,7 @@
 		@extend %title
 
 	&__act
+		font-size: 17px
 
 		&-title
 			margin-bottom: 25px
