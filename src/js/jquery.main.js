@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	function scroll(scrollLink, speed){
 		$('html, body').animate({
-			scrollTop: scrollLink.offset().top
+			scrollTop: scrollLink.offset().top - $('.fixed').outerHeight()
 		}, speed);
 		return false;
 	}
