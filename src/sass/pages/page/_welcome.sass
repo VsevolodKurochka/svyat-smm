@@ -1,0 +1,82 @@
+.welcome
+	+relative()
+	background-color: #080f34
+	color: $color-white
+	+padding-y(45px)
+	z-index: 1
+
+	&:before
+		content: ""
+		+absolute(0, 0)
+		+size(100%)
+		+bg('../img/welcome-bg.jpg')
+		opacity: 0.2
+		z-index: -1
+
+	+min(sm)
+		+padding-y(75px, 60px)
+
+	&__subtitle
+		font-weight: 100
+		font-size: 18px
+	&__header
+		overflow: hidden
+		+margin-y(30px)
+		
+		background-color: transparentize(#27b4ff, 0.8)
+
+	&__title
+		+relative()
+		padding: 15px 15px 15px 30px
+		line-height: 1.1
+		font-size: 25px
+		+font('secondary')
+		z-index: 1
+
+		&:before,
+		&:after
+			content: ""
+			+absolute(0)
+			background-color: #27b4ff
+			z-index: -1
+			+size(100%)
+
+		&:before
+			left: -95%
+			border-radius: 0 15px 15px 0
+
+		&:after
+			right: -90%
+			border-radius: 15px 0 0 15px
+
+		+min(sm)
+			padding-left: 100px
+
+		+min(md)
+			padding-left: 150px
+			font-size: 40px
+
+	&__content
+		p
+			+offset(15px)
+
+		ol
+			padding-left: 17px
+
+	&__video
+		+margin-y(45px)
+		text-align: center
+
+		&-inner
+			+min(md)
+				width: 70%
+				+margin-x(auto)
+
+		&-iframe
+			+size(100%, 170px)
+
+			+min(sm)
+				height: 250px
+
+			+min(lg)
+				height: 450px
