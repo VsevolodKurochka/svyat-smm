@@ -1,7 +1,8 @@
-mixin navAddition2()
+mixin navAddition2(mobile)
 	+e.addition.col-7.col-md-8#js-nav-addition
-		+e.addition-mobile
-			+e.A.addition-btn.btn._brand-1.effect._bounce-top.anchor(href="#form") Смотреть занятия
+		if mobile == 'true'
+			+e.addition-mobile
+				+e.A.addition-btn.btn._brand-1.effect._bounce-top.anchor(href="#form") Смотреть занятия
 		+e.addition-content
 			+e.addition-links.js-nav-links
 				+e.A.addition-link(href="mailto: imarkschool@gmail.com") imarkschool@gmail.com

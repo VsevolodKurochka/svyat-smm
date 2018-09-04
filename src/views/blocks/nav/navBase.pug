@@ -2,11 +2,10 @@ include /blocks/nav/navLogo
 include /blocks/nav/navMenu
 include /blocks/nav/navAddition2
 
-mixin navBase(additionalClass)
+mixin navBase(additionalClass, additionMobile)
 	+b.fixed
 		+b.nav#js-navigation&attributes(attributes)(class=additionalClass)
 			+e.container.container
 				+e.row.row
 					+navLogo()
-					//+navMenu()
-					+navAddition2()
+					+navAddition2(additionMobile)
