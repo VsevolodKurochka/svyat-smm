@@ -1,0 +1,20 @@
+block variables
+
+//- Include helpers mixins
+include /mixins/mixins
+include /bem/index
+//- End
+
+doctype html
+html.lm-html(lang="ru" prefix="og: http://ogp.me/ns#")
+	head
+		include /includes/head
+
+		block css
+			include /includes/styles
+
+		block js
+			include /includes/scripts
+
+		block blocks
+	block body

@@ -1,26 +1,122 @@
+$color-brand: #ecc719
+
 .lm
+	color: $color-white
+	+padding-y(45px)
+	background-size: cover
+	// +min(sm)
+	// 	display: flex
+	// 	align-items: center
+	// 	justify-content: center
+	
 	&_1
 		+bg('../img/lm-1-bg.jpg')
+
+	&__row
+		+min(sm)
+			align-items: center
+
 	&__title
-		+relative()
 		display: flex
 		justify-content: center
+		margin-bottom: 30px
+		font-size: 25px
+
 		+font('secondary')
-
-		&:before
-			content: ""
-			position: absolute
-
+		
 		+min(sm)
-			font-size: 25px
+			font-size: 28px
+
 		+min(md)
+			margin-bottom: 45px
 			font-size: 30px
+
+		&-inner
+			+relative()
+			&:before
+				content: ""
+				position: absolute
 				
-		&_1
+		&_1 &-inner
 			&:before
 				left: 0
 				top: 0
 				+bg('../img/lm-title-1.png')
 
 				+min(sm)
-					+size(79px,140px)
+					top: -15px
+					left: -45px
+					+size(60px, 120px)
+
+	&__form
+		padding: 30px 15px
+		background-color: transparentize($color-black, 0.6)
+		text-align: center
+
+		+min(md)
+			padding: 40px
+
+		&-title
+			font-size: 18px
+			margin-bottom: 15px
+			+font('secondary')
+
+			+min(md)
+				margin-bottom: 30px
+
+			&_1
+				color: #ecc719
+
+		&_1
+			input
+				display: block
+				padding: 10px 15px
+				width: 100%
+				max-width: 100%
+				color: darken($color-white, 45%)
+				text-align: left
+				font-size: 16px
+				-webkit-appearance: none
+				outline: none
+				border: 2px solid $color-white
+				margin-bottom: 30px
+
+				+transition()
+
+				+placeholder()
+					color: darken($color-white, 45%)
+					+transition()
+			button
+				+relative
+				display: inline-block
+				
+				max-width: 100%
+				z-index: 1
+				overflow: hidden
+
+				padding: 20px 40px
+				font-size: 16px
+
+				border: none
+				border-radius: 45px
+				
+				font-weight: normal
+				text-decoration: none
+				line-height: 1.4
+				+font('secondary')
+				
+				-webkit-tap-highlight-color: transparent
+				outline: none
+				transform: translateZ(0)
+
+				+transition()
+
+				background-color: $color-brand
+
+				&:before
+					background-color: darken($color-brand, 10%)
+
+				+min(md)
+					padding: 25px 40px
+					font-size: 25px
+					min-width: 300px

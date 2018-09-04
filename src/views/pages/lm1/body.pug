@@ -1,0 +1,27 @@
++b.BODY.lm._1
+	.container
+		+e.H1.title._1
+			+e.SPAN.title-inner Универсальный набор знаний 
+				br
+				| по увеличению охвата в Instagram
+		+e.row.row
+			+e.image.col-12.col-sm-6
+				img(src="img/lm-1-form.png")
+			.col-12.col-sm-6
+				+e.form._1
+					+e.P.form-title._1 Скачать бесплатно набор материалов,
+						br
+						| которые помогут увеличить ваш охват 
+						br
+						| в Instagram
+					form(method='POST', action='https://imarkschoolru.activehosted.com/proc.php', novalidate='')
+						input(type='hidden', name='u', value='25')
+						input(type='hidden', name='f', value='25')
+						input(type='hidden', name='s')
+						input(type='hidden', name='c', value='0')
+						input(type='hidden', name='m', value='0')
+						input(type='hidden', name='act', value='sub')
+						input(type='hidden', name='v', value='2')
+						input(type='text', name='fullname', placeholder='Имя')
+						input(type='text', name='email', placeholder='Email', required='')
+						button.effect.effect_bounce-top(type='submit') Скачать
