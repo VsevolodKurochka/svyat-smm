@@ -9,8 +9,12 @@ doctype html
 html(lang="ru" prefix="og: http://ogp.me/ns#")
 	head
 		include /includes/head
-		include /includes/styles
-		include /includes/scripts
+
+		block css
+			include /includes/styles
+
+		block js
+			include /includes/scripts
 
 		block blocks
 	body
