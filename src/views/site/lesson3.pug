@@ -1,0 +1,19 @@
+extends /layouts/base
+
+block blocks
+	include /blocks/nav/navBase
+
+block css
+	+css('css/page.css')
+
+block variables
+	- var title = 'Продвижение в Youtube';
+	- var description = 'Бесплатный мини-курс от Дамира Халилова';
+	- var url = '';
+	- var image = 'img/first-1.png';
+
+block nav
+	+navBase('true')
+block content
+	include /pages/lesson3/welcome
+	include /pages/lesson3/comments
