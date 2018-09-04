@@ -27,7 +27,7 @@
 
 	&__title
 		+relative()
-		padding: 15px 15px 15px 30px
+		padding: 15px 30px
 		line-height: 1.1
 		font-size: 25px
 		+font('secondary')
@@ -50,10 +50,10 @@
 			border-radius: 15px 0 0 15px
 
 		+min(sm)
-			padding-left: 100px
+			+padding-x(100px)
 
 		+min(md)
-			padding-left: 150px
+			+padding-x(150px)
 			font-size: 40px
 
 	&__content
@@ -68,9 +68,36 @@
 		text-align: center
 
 		&-inner
+			+relative()
 			+min(md)
 				width: 70%
 				+margin-x(auto)
+
+			&:before,
+			&:after
+				content: ""
+				+absolute()
+				background-color: #27b4ff
+				border-radius: 15px
+				z-index: -1
+
+			&:before
+				left: -10px
+				bottom: -10px
+				+size(45%, 60%)
+
+			&:after
+				right: -10px
+				top: -10px
+				+size(25%)
+
+			+min(md)
+				&:before
+					left: -15px
+					bottom: -15px
+				&:after
+					right: -15px
+					top: -15px
 
 		&-iframe
 			+size(100%, 170px)
