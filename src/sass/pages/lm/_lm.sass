@@ -5,8 +5,8 @@ $color-brand: #ecc719
 	+padding-y(45px)
 	background-size: cover
 
-	&-html
-		height: 100%
+	// &-html
+	// 	height: 100%
 
 	+min(sm)
 		&_center
@@ -17,7 +17,9 @@ $color-brand: #ecc719
 	
 	&_1
 		+bg('../img/lm-1-bg.jpg')
-
+	
+	&_2
+		+bg('../img/lm-2-bg.jpg')
 
 	&__row
 		+min(sm)
@@ -65,9 +67,20 @@ $color-brand: #ecc719
 				+bg('../img/lm-title-1.png')
 
 				+min(sm)
-					top: -15px
+					top: -25px
 					left: -45px
 					+size(60px, 120px)
+
+		&_2 &-inner
+			&:before
+				left: 0
+				top: 0
+				+size(8px, 100%)
+				+bg('../img/lm-2-title.png')
+
+				+min(sm)
+					top: 0
+					left: -45px
 
 	&__form
 		padding: 30px 15px
@@ -80,7 +93,6 @@ $color-brand: #ecc719
 		&-title
 			font-size: 18px
 			margin-bottom: 15px
-			+font('secondary')
 
 			+min(md)
 				margin-bottom: 30px
@@ -88,56 +100,80 @@ $color-brand: #ecc719
 			&_1
 				color: #ecc719
 
+		input
+			display: block
+			
+			width: 100%
+			max-width: 100%
+			text-align: left
+			font-size: 16px
+			-webkit-appearance: none
+			outline: none
+			+transition()
+		button
+			+relative
+			display: inline-block
+			
+			max-width: 100%
+			z-index: 1
+			overflow: hidden
+
+			padding: 20px 40px
+			font-size: 16px
+
+			border: none
+			border-radius: 45px
+			
+			font-weight: normal
+			text-decoration: none
+			line-height: 1.4
+			+font('secondary')
+			
+			-webkit-tap-highlight-color: transparent
+			outline: none
+			transform: translateZ(0)
+
+			+transition()
+
+			color: $color-white
+
+			+min(md)
+				padding: 25px 40px
+				font-size: 25px
+				min-width: 300px
+
 		&_1
 			input
-				display: block
 				padding: 10px 15px
-				width: 100%
-				max-width: 100%
 				color: darken($color-white, 45%)
-				text-align: left
-				font-size: 16px
-				-webkit-appearance: none
-				outline: none
 				border: 2px solid $color-white
 				margin-bottom: 30px
-
-				+transition()
-
 				+placeholder()
 					color: darken($color-white, 45%)
 					+transition()
 			button
-				+relative
-				display: inline-block
-				
-				max-width: 100%
-				z-index: 1
-				overflow: hidden
-
-				padding: 20px 40px
-				font-size: 16px
-
-				border: none
-				border-radius: 45px
-				
-				font-weight: normal
-				text-decoration: none
-				line-height: 1.4
-				+font('secondary')
-				
-				-webkit-tap-highlight-color: transparent
-				outline: none
-				transform: translateZ(0)
-
-				+transition()
-
 				background-color: $color-brand
-
 				&:before
 					background-color: darken($color-brand, 10%)
 
-				+min(md)
-					padding: 25px 40px
-					font-size: 25px
-					min-width: 300px
+		&_2
+			border-radius: 13px
+			background-color: rgb(55, 54, 86)
+			box-shadow: 0px 24px 43px 0px rgba(0, 0, 0, 0.15)
+
+			input
+				padding: 15px
+				background-color: rgb(76, 76, 113)
+				
+				color: #8585ae
+				margin-bottom: 15px
+				border-radius: 8px
+				border: none
+				+placeholder()
+					color: #8585ae
+					+transition()
+			button
+				margin-top: 30px
+				background-image: linear-gradient( 0deg, rgb(234,97,123) 0%, rgb(252,148,135) 100%);
+				&:before
+					background-color: #da6275
